@@ -4,23 +4,31 @@
     justify-content: center;
     align-items: center;
 
-    & .ttl {
+    .ttl {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 3rem;
 
-        & .enB {
+        .enB {
             font-size: 16rem;
         }
 
-        & .enS {
+        .enS {
             font-size: 3.2rem;
         }
     }
 }
 
 .works {
-    & .ttl {
+    margin: 0 16rem;
+    .inner {
+        .ttl {
+            font-size: 12.8rem;
+            text-align: right;
+        }
+        .list {
+            border-bottom: 0.1rem solid var(--black);
+        }
     }
 }

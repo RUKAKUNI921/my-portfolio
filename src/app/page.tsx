@@ -1,4 +1,8 @@
+import { works, worksOrder } from "@/data/works";
+import Work from "@/components/works/Work";
 import styles from "./page.module.css";
+
+const sortedWorks = worksOrder.map((id) => works.find((w) => w.id === id)!);
 
 export default function Home() {
   return (
@@ -12,7 +16,16 @@ export default function Home() {
         </h1>
       </section>
       <section className={styles.works}>
-        <h2 className={`${styles.ttl} u-ff-en-b u-trim`}>WORKS</h2>
+        <div className={styles.inner}>
+          <h2 className={`${styles.ttl} u-ff-en-b u-trim`}>WORKS</h2>
+          <ul className={styles.list}>
+            {sortedWorks.map((work) => (
+              <li key={work.id} className={styles.item}>
+                <Work work={work} />
+              </li>
+            ))}
+          </ul>
+        </div>
       </section>
     </main>
   );
