@@ -9,14 +9,14 @@ export type Work = {
 export const works: Work[] = [
   {
     id: "work-01",
-    slug: "mochinava",
+    slug: "mochinavi",
     title: "MOCHINAVI",
     category: "UI DESIGN",
     year: "2025.08",
   },
   {
     id: "work-02",
-    slug: "coffee_robot",
+    slug: "coffee-robot",
     title: "COFFEE ROBOT",
     category: "ANIMATION",
     year: "2025.11",

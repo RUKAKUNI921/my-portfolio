@@ -21,8 +21,8 @@
 }
 
 .works {
-    margin: 0 16rem;
     .inner {
+        margin: 0 16rem;
         .ttl {
             font-size: 12.8rem;
             text-align: right;

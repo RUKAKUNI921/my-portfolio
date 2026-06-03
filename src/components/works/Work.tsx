@@ -10,7 +10,7 @@ export default function Work({ work }: Props) {
     <article className={styles.article}>
       <div className={styles.inner}>
         <div className={styles.body}>
-          <p className={`${styles.cat} u-ff-en-`}>{work.category}</p>
+          <p className={`${styles.cat} u-ff-en-m`}>{work.category}</p>
           <h3 className={`${styles.ttl} u-ff-en-m`}>{work.title}</h3>
           <p className={`${styles.year} u-ff-en-m`}>{work.year}</p>
         </div>
