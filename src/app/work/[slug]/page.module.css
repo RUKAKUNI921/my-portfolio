@@ -1,0 +1,19 @@
+.main {
+    padding: 16rem 0;
+}
+
+.work {
+    .inner {
+        margin: 0 16rem;
+
+        .ttl {
+            font-size: 6.4rem;
+        }
+
+        .cat {
+            margin-top: 2.4rem;
+            font-size: 2.4rem;
+            color: var(--gray);
+        }
+    }
+}

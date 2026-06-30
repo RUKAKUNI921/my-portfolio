@@ -3,10 +3,7 @@
     --black: #000;
     --white: #fff;
     --gray: #afafaf;
-    --red: #f53a3a;
-    --green: #65e6a5;
-    --en-sans: futura-pt, sans-serif; /*light:300, Medium: 500, Heavy: 700*/
-    --en-sans-bold: futura-pt-bold, sans-serif;
+    --en-sans: gotham, sans-serif; /*light:300, Medium: 500, Bold: 700, Black: 800*/
 }
 /*reset css*/
 body,
@@ -31,6 +28,7 @@ figcaption {
     margin: 0;
     padding: 0;
     text-decoration: none;
+    color: inherit;
     list-style: none;
     line-height: 1;
     outline: none;
@@ -75,7 +73,8 @@ html {
     font-weight: 700;
 }
 .u-ff-en-b {
-    font-family: var(--en-sans-bold);
+    font-family: var(--en-sans);
+    font-weight: 800;
 }
 
 .u-trim {
