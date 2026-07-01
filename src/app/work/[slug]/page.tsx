@@ -13,7 +13,7 @@ export default async function WorkPage({ params }: PageProps<"/work/[slug]">) {
   if (!work) notFound();
 
   return (
-    <main className={styles.main}>
+    <main className={`u-main`}>
       <section className={styles.work}>
         <div className={styles.inner}>
           <h1 className={`${styles.ttl} u-ff-en-h u-trim`}>{work.title}</h1>

@@ -19,16 +19,3 @@
         }
     }
 }
-
-.works {
-    .inner {
-        margin: 0 16rem;
-        .ttl {
-            font-size: 12.8rem;
-            text-align: right;
-        }
-        .list {
-            border-bottom: 0.1rem solid var(--black);
-        }
-    }
-}

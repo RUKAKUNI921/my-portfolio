@@ -8,6 +8,7 @@ export type Work = {
   slug: string;
   title: string;
   category: string[];
+  thumb: string;
   year: string;
   Gallery: ComponentType;
 };
@@ -18,6 +19,7 @@ export const works: Work[] = [
     slug: "mochinavi",
     title: "MOCHINAVI",
     category: ["UI DESIGN", "CG ANIMTION"],
+    thumb: "/thumbs/mochinavi-thumb.png",
     year: "2025.08",
     Gallery: MochinaviGallery,
   },
@@ -26,6 +28,7 @@ export const works: Work[] = [
     slug: "coffee-robot",
     title: "COFFEE ROBOT",
     category: ["CG ANIMATION"],
+    thumb: "/thumbs/coffeeRobot-thumb.png",
     year: "2025.11",
     Gallery: CoffeeRobotGallery,
   },
@@ -33,10 +36,9 @@ export const works: Work[] = [
     id: "work-03",
     slug: "mynos",
     title: "MYNOS",
-    category: ["GRAPHIC DESIGN", "PRODUCT DESIGN"],
-    year: "",
+    category: ["PRODUCT DESIGN", "GRAPHIC DESIGN"],
+    thumb: "/thumbs/mynos-thumb.png",
+    year: "2025.06",
     Gallery: MynosGallery,
   },
 ];
-
-export const worksOrder = ["work-03", "work-02", "work-01"];

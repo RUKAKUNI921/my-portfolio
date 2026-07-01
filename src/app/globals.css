@@ -80,3 +80,11 @@ html {
 .u-trim {
     text-box: trim-both cap alphabetic;
 }
+
+.u-main {
+    padding-bottom: 16rem;
+}
+
+.u-inner {
+    margin: 0 16rem;
+}
