@@ -3,24 +3,37 @@
         padding-bottom: 2.4rem;
 
         border-bottom: 0.1rem solid var(--black);
-        font-size: 8rem;
+
+        font-size: 4.8rem;
+        text-align: left;
     }
 
     .list {
+        li:has(+ li .article:hover) .article {
+            border-bottom-color: transparent;
+        }
+
+        li:first-child .article:hover {
+            border-top-color: transparent;
+        }
+
         .article {
-            width: 75%;
+            position: relative;
+            overflow: hidden;
+
+            width: 110rem;
             display: block;
-            /*border-top: -0.1rem solid var(--black);*/
-            box-shadow: 0 -0.1rem 0 0 var(--black);
+
+            border-top: 0.1rem solid transparent;
             border-bottom: 0.1rem solid var(--black);
 
-            /*margin-top: -0.1rem;*/
             margin-left: auto;
 
-            transition: all 0.3s ease;
+            transition: width 0.3s var(--bezier-01);
 
             &:hover {
                 width: 100%;
+                border-top-color: var(--black);
 
                 .inner {
                     .thumb {
@@ -30,33 +43,35 @@
             }
 
             .inner {
-                padding: 3.2rem 0;
                 display: flex;
                 justify-content: space-between;
+
+                padding: 4.8rem 0;
 
                 .body {
                     display: flex;
                     flex-direction: column;
-                    gap: 1.6rem;
-
-                    .cat {
-                        font-size: 1.6rem;
-                    }
+                    gap: 2.4rem;
 
                     .articleTtl {
-                        font-size: 4.8rem;
+                        font-size: 2.4rem;
                     }
 
-                    .year {
+                    .info {
                         font-size: 1.6rem;
+
+                        .cat {
+                            color: var(--gray);
+                        }
                     }
                 }
 
                 .thumb {
-                    height: 30rem;
+                    position: relative;
+                    height: 20rem;
                     aspect-ratio: 16 / 9;
 
-                    transition: all 0.3s ease;
+                    transition: all 0.3s var(--bezier-01);
 
                     img {
                         width: 100%;

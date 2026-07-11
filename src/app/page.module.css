@@ -1,21 +1,48 @@
 .hero {
     /*height: 100vh;*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
 
     .ttl {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 3rem;
+        gap: 1.6rem;
 
         .enB {
-            font-size: 16rem;
+            font-size: 8rem;
         }
 
         .enS {
-            font-size: 3.2rem;
+            font-size: 2rem;
+        }
+    }
+
+    .svgWrap {
+        /*width: 50rem;*/
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+
+        /*margin: 0 auto;*/
+
+        .svg {
+            width: 50rem;
+
+            svg {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                overflow: visible;
+            }
+        }
+
+        .name {
+            font-size: 2.4rem;
         }
     }
 }

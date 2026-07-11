@@ -2,14 +2,62 @@
     .inner {
         margin: 0 16rem;
 
-        .ttl {
-            font-size: 6.4rem;
+        .ttlWrap {
+            display: flex;
+            align-items: flex-end;
+            gap: 3.2rem;
+
+            .ttl {
+                font-size: 3.2rem;
+            }
+
+            .cat {
+                /*margin-top: 2.4rem;*/
+                font-size: 1.6rem;
+                color: var(--gray);
+            }
         }
 
-        .cat {
-            margin-top: 2.4rem;
-            font-size: 2.4rem;
-            color: var(--gray);
+        .infoWrap {
+            display: flex;
+            justify-content: space-between;
+
+            margin-top: 6rem;
+
+            .desc {
+                width: 50%;
+
+                font-size: 1.6rem;
+                line-height: 1.6;
+                white-space: pre-line;
+            }
+
+            .list {
+                display: flex;
+                flex-direction: column;
+                gap: 1.6rem;
+
+                width: 40%;
+
+                .item {
+                    display: flex;
+                    justify-content: space-between;
+
+                    padding-bottom: 0.8rem;
+                    border-bottom: 0.1rem solid var(--black);
+
+                    font-size: 1.6rem;
+                    text-align: right;
+
+                    .tag {
+                        color: var(--gray);
+                    }
+                }
+            }
+        }
+
+        .gallery {
+            margin-top: 6rem;
         }
     }
 }
