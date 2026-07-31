@@ -9,12 +9,15 @@
 
             .ttl {
                 font-size: 3.2rem;
+                /*clip-path: inset(0 0 100% 0);*/
+                opacity: 0;
             }
 
             .cat {
                 /*margin-top: 2.4rem;*/
                 font-size: 1.6rem;
                 color: var(--gray);
+                opacity: 0;
             }
         }
 
@@ -30,6 +33,9 @@
                 font-size: 1.6rem;
                 line-height: 1.6;
                 white-space: pre-line;
+
+                opacity: 0;
+                transform: translateY(12px);
             }
 
             .list {
@@ -49,8 +55,33 @@
                     font-size: 1.6rem;
                     text-align: right;
 
+                    opacity: 0;
+                    transform: translateY(12px);
+
                     .tag {
                         color: var(--gray);
+                    }
+
+                    .link {
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 0.4rem;
+
+                        padding-bottom: 0.2rem;
+                        border-bottom: 0.1rem solid currentColor;
+
+                        transition: color 0.2s ease;
+
+                        &:hover {
+                            color: var(--green);
+                        }
+
+                        .linkIcon {
+                            flex-shrink: 0;
+
+                            width: 1.6rem;
+                            height: 1.6rem;
+                        }
                     }
                 }
             }

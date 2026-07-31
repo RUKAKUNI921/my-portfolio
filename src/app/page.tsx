@@ -1,13 +1,64 @@
+"use client";
+
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
 import WorkSection from "@/components/sections/WorkSection";
 import RepelElement from "@/components/ui/RepelElement";
 import styles from "./page.module.css";
 
+// Module-scoped: resets on a hard reload, but survives client-side (soft)
+// navigation back from a sub-page, so the intro doesn't replay and get stuck.
+let introPlayed = false;
+
 export default function Home() {
+  const mainRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const main = mainRef.current;
+    if (!main) return;
+
+    const svgWrap = main.querySelector<HTMLElement>('[data-anim-step="svg"]');
+    const shapes = svgWrap?.querySelectorAll<SVGElement>("path, rect, polygon, circle") ?? [];
+    const ttl = main.querySelector<HTMLElement>('[data-anim-step="ttl"]');
+    const line = main.querySelector<HTMLElement>('[data-anim-step="line"]');
+    const items = main.querySelectorAll<HTMLElement>('[data-anim-step="item"]');
+
+    const tl = gsap.timeline({ defaults: { ease: "power2.out" } });
+
+    if (introPlayed) {
+      // Skip the svg pop-in (already played, and replaying it here has caused it
+      // to get stuck invisible), but still replay the rest of the sequence.
+      gsap.set(shapes, { opacity: 1, scale: 1, rotate: 0 });
+    } else if (shapes.length) {
+      tl.from(shapes, {
+        opacity: 0,
+        scale: 0,
+        rotate: () => gsap.utils.random(-20, 20),
+        transformOrigin: "50% 50%",
+        duration: 0.6,
+        stagger: { each: 0.02, from: "random" },
+        ease: "back.out(2.2)",
+      });
+    }
+    tl.call(() => {
+      introPlayed = true;
+    });
+    if (ttl) tl.fromTo(ttl, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5 });
+    if (line) tl.fromTo(line, { scaleX: 0 }, { scaleX: 1, duration: 0.6 });
+    if (items.length) {
+      tl.fromTo(items, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5, stagger: 0.08 });
+    }
+
+    return () => {
+      tl.kill();
+    };
+  }, []);
+
   return (
-    <main className={``}>
+    <main className={``} ref={mainRef}>
       <section className={`${styles.hero} u-section-margin`}>
         <div className={`u-inner`}>
-          <div className={`${styles.svgWrap}`}>
+          <div className={`${styles.svgWrap}`} data-anim-step="svg">
             <RepelElement className={`${styles.svg}`} radius={30} strength={10}>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 291.03 34.75">
                 <defs>
