@@ -20,7 +20,10 @@ export type Work = {
   Gallery: ComponentType;
 };
 
-export const works: Work[] = [
+// 表示順はこの配列の並びで決まります。順番を変えたい場合はここのslugを並べ替えるだけでOKです。
+const workOrder = ["coffee-robot", "susumu-jukukaido", "mynos", "mochinavi", "split-keyboard", "saunametsa"];
+
+const worksData: Work[] = [
   {
     id: "work-01",
     slug: "split-keyboard",
@@ -102,3 +105,5 @@ export const works: Work[] = [
     Gallery: SusumuJukukaidoGallery,
   },
 ];
+
+export const works: Work[] = workOrder.map((slug) => worksData.find((w) => w.slug === slug)!);
