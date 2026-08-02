@@ -1,5 +1,8 @@
 .image {
     margin-top: 1.6rem;
+
+    @media (max-width: 767px) {
+    }
 }
 
 .images01 {
@@ -8,6 +11,9 @@
     gap: 1.6rem;
 
     margin-top: 1.6rem;
+
+    @media (max-width: 767px) {
+    }
 
     .img {
         width: 100%;
@@ -27,6 +33,9 @@
     gap: 1.6rem;
 
     margin-top: 1.6rem;
+
+    @media (max-width: 767px) {
+    }
 
     .img {
         width: 100%;

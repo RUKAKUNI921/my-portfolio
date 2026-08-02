@@ -16,11 +16,12 @@ export default async function WorkPage({ params }: PageProps<"/work/[slug]">) {
   return (
     <main className={``}>
       <section className={`${styles.work} u-section-margin`}>
-        <div className={styles.inner}>
+        <div className={`${styles.inner} u-inner`}>
           <WorkIntro
             work={{
               title: work.title,
               category: work.category,
+              thumb: work.thumb,
               description: work.description,
               workType: work.workType,
               tools: work.tools,

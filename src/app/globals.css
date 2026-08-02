@@ -65,6 +65,10 @@ picture {
 html {
     font-size: calc(100vw / 192); /* 1920px幅のとき 1rem = 10px */
     overflow-x: hidden;
+
+    @media (max-width: 767px) {
+        font-size: calc(100vw / 39); /* 390px幅のとき 1rem = 10px */
+    }
 }
 body {
     overflow-x: hidden;
@@ -114,12 +118,20 @@ body {
 
 .u-main {
     margin-top: 10rem;
+    @media (max-width: 767px) {
+    }
 }
 
 .u-section-margin {
     margin-top: 10rem;
+    @media (max-width: 767px) {
+        margin-top: 4rem;
+    }
 }
 
 .u-inner {
     margin: 0 16rem;
+    @media (max-width: 767px) {
+        margin: 0 2rem;
+    }
 }

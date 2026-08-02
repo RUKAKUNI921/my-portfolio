@@ -1,10 +1,18 @@
 .footer {
     width: 100%;
 
-    margin: 16rem 0 6rem;
+    margin: 8rem 0 6rem;
+
+    @media (max-width: 767px) {
+        margin: 4rem 0 3rem;
+    }
 
     .txt {
         font-size: 1.6rem;
         text-align: center;
+
+        @media (max-width: 767px) {
+            font-size: 1.4rem;
+        }
     }
 }

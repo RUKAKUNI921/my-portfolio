@@ -4,18 +4,30 @@
     /*justify-content: center;*/
     /*align-items: center;*/
 
+    @media (max-width: 767px) {
+    }
+
     .ttl {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 1.6rem;
 
+        @media (max-width: 767px) {
+        }
+
         .enB {
             font-size: 8rem;
+
+            @media (max-width: 767px) {
+            }
         }
 
         .enS {
             font-size: 2rem;
+
+            @media (max-width: 767px) {
+            }
         }
     }
 
@@ -30,8 +42,16 @@
 
         /*margin: 0 auto;*/
 
+        @media (max-width: 767px) {
+        }
+
         .svg {
-            width: 50rem;
+            width: 80rem;
+            /*width: 100%;*/
+
+            @media (max-width: 767px) {
+                width: 100%;
+            }
 
             svg {
                 width: 100%;
@@ -43,6 +63,9 @@
 
         .name {
             font-size: 2.4rem;
+
+            @media (max-width: 767px) {
+            }
         }
     }
 }

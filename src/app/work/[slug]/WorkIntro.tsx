@@ -5,7 +5,10 @@ import gsap from "gsap";
 import styles from "./page.module.css";
 import type { Work } from "@/data/works";
 
-type WorkIntroProps = Pick<Work, "title" | "category" | "description" | "workType" | "tools" | "year" | "link">;
+type WorkIntroProps = Pick<
+  Work,
+  "title" | "category" | "thumb" | "description" | "workType" | "tools" | "year" | "link"
+>;
 
 export default function WorkIntro({ work }: { work: WorkIntroProps }) {
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -35,12 +38,17 @@ export default function WorkIntro({ work }: { work: WorkIntroProps }) {
   return (
     <>
       <div className={styles.ttlWrap}>
-        <h1 ref={titleRef} className={`${styles.ttl} u-ff-en-m u-trim`}>
-          {work.title}
-        </h1>
-        <p ref={catRef} className={`${styles.cat} u-ff-en-l u-trim`}>
-          {work.category.join(" / ")}
-        </p>
+        <div className={styles.thumbWrap}>
+          <img src={work.thumb} alt="" className={styles.spThumb} />
+        </div>
+        <div className={styles.ttlWrapInner}>
+          <h1 ref={titleRef} className={`${styles.ttl} u-ff-en-m u-trim`}>
+            {work.title}
+          </h1>
+          <p ref={catRef} className={`${styles.cat} u-ff-en-l u-trim`}>
+            {work.category.join(" / ")}
+          </p>
+        </div>
       </div>
 
       <div className={styles.infoWrap}>
@@ -52,9 +60,9 @@ export default function WorkIntro({ work }: { work: WorkIntroProps }) {
             <span className={styles.tag}>PROJECT TYPE :</span>
             {work.workType}
           </li>
-          <li className={`${styles.item} u-ff-txt u-trim`}>
+          <li className={`${styles.item} ${styles.itemTools} u-ff-txt u-trim`}>
             <span className={styles.tag}>TOOLS :</span>
-            {work.tools.join(" / ")}
+            <span className={styles.tool}>{work.tools.join(" / ")}</span>
           </li>
           <li className={`${styles.item} u-ff-txt u-trim`}>
             <span className={styles.tag}>DATE :</span>
@@ -63,12 +71,7 @@ export default function WorkIntro({ work }: { work: WorkIntroProps }) {
           {work.link && (
             <li className={`${styles.item} u-ff-txt u-trim`}>
               <span className={styles.tag}>SITE :</span>
-              <a
-                className={styles.link}
-                href={work.link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a className={styles.link} href={work.link} target="_blank" rel="noopener noreferrer">
                 {work.link}
                 <svg
                   className={styles.linkIcon}

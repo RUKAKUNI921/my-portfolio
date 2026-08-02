@@ -5,6 +5,9 @@
     justify-content: center;
     align-items: center;
 
+    @media (max-width: 767px) {
+    }
+
     .link {
         display: flex;
         flex-direction: column;
@@ -12,16 +15,28 @@
         align-items: center;
         gap: 2.4rem;
 
+        @media (max-width: 767px) {
+        }
+
         .sorry {
             font-size: 9.5rem;
+
+            @media (max-width: 767px) {
+            }
         }
 
         .num {
             font-size: 16rem;
+
+            @media (max-width: 767px) {
+            }
         }
 
         .return {
             font-size: 4.3rem;
+
+            @media (max-width: 767px) {
+            }
         }
 
         &:hover {

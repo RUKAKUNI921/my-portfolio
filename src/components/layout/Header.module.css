@@ -11,21 +11,41 @@
     background: var(--black);
     color: var(--white);
 
+    @media (max-width: 767px) {
+        padding: 2.4rem 1rem;
+    }
+
     .inner {
         display: flex;
         justify-content: space-between;
         align-items: center;
 
+        @media (max-width: 767px) {
+        }
+
         .logo {
             font-size: 2.4rem;
+
+            @media (max-width: 767px) {
+                font-size: 1.6rem;
+            }
         }
 
         .nav {
             .list {
                 display: flex;
                 gap: 3.2rem;
+
+                @media (max-width: 767px) {
+                    gap: 1.6rem;
+                }
+
                 .item {
                     font-size: 1.6rem;
+
+                    @media (max-width: 767px) {
+                        font-size: 1.4rem;
+                    }
                 }
             }
         }

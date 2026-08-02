@@ -26,6 +26,10 @@
     gap: 1.6rem;
     margin-top: 1.6rem;
 
+    @media (max-width: 767px) {
+        grid-template-columns: 1fr;
+    }
+
     .img {
         width: 100%;
         aspect-ratio: 16 / 9;
@@ -51,9 +55,15 @@
     background-image: radial-gradient(var(--gray) 1px, transparent 1px);
     background-size: 4rem 4rem;
     pointer-events: none;
+
+    @media (max-width: 767px) {
+    }
 }
 
 .fadeIn {
     position: relative;
     opacity: 0;
+
+    @media (max-width: 767px) {
+    }
 }

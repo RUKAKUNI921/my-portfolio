@@ -1,10 +1,20 @@
 .about {
+    @media (max-width: 767px) {
+    }
     .ttl {
         font-size: 4.8rem;
+
+        @media (max-width: 767px) {
+            font-size: 3.2rem;
+        }
     }
     .section {
         .name {
             margin-top: 6rem;
+
+            @media (max-width: 767px) {
+                margin-top: 4rem;
+            }
 
             .ja {
                 position: relative;
@@ -12,6 +22,9 @@
                 display: inline-block;
 
                 font-size: 4.8rem;
+
+                @media (max-width: 767px) {
+                }
             }
 
             .en {
@@ -20,6 +33,9 @@
                 margin-top: 1.6rem;
 
                 font-size: 1.6rem;
+
+                @media (max-width: 767px) {
+                }
             }
         }
 
@@ -30,6 +46,14 @@
 
             font-size: 2rem;
             line-height: 1.8;
+
+            @media (max-width: 767px) {
+                width: 100%;
+
+                margin-top: 3rem;
+
+                font-size: 1.6rem;
+            }
         }
     }
 }
