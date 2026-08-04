@@ -5,6 +5,7 @@ import MynosGallery from "@/components/works/mynos/MynosGallery";
 import SplitKeyboardGallery from "@/components/works/split-keyboard/SplitKeyboardGallery";
 import SaunametsaGallery from "@/components/works/saunametsa/SaunametsaGallery";
 import SusumuJukukaidoGallery from "@/components/works/susumu-jukukaido/SusumuJukukaidoGallery";
+import WatabokuGallery from "@/components/works/wataboku/WatabokuGallery";
 
 export type Work = {
   id: string;
@@ -21,7 +22,15 @@ export type Work = {
 };
 
 // 表示順はこの配列の並びで決まります。順番を変えたい場合はここのslugを並べ替えるだけでOKです。
-const workOrder = ["coffee-robot", "susumu-jukukaido", "mynos", "mochinavi", "split-keyboard", "saunametsa"];
+const workOrder = [
+  "coffee-robot",
+  "wataboku",
+  "susumu-jukukaido",
+  "mynos",
+  "mochinavi",
+  "split-keyboard",
+  "saunametsa",
+];
 
 const worksData: Work[] = [
   {
@@ -103,6 +112,19 @@ const worksData: Work[] = [
       "「転機」をテーマに、知人や家族などの年長者にインタビューを行い、その経験をWebページとしてまとめる課題として制作したインタビュー記録サイトです。小中学生時代に通っていた塾の恩師にインタビューを行いました。\n\n塾講師のアルバイトから塾長になるまで、先生が20代で経験したいくつもの転機を取り上げました。「先生って呼ばれてみたい」という気持ちで塾業界に飛び込んだこと、上下関係のストレスから独立を考えるようになったこと、そして生徒との信頼関係を大事にするようになったこと——これらをプロローグ＋全3章の構成でまとめています。\n\n制作でいちばん苦労したのは、先生の経験を絵にすること。抽象的な出来事や気持ちを、どうやって一枚のイラストに落とし込むかを何度も考えました。また、GSAPを使ってループアニメーションやスクロールに合わせて動く演出を入れ、読んでいるうちに物語が進んでいくような体験を目指しました。",
     link: "https://md2024-interview-web-page.vercel.app/",
     Gallery: SusumuJukukaidoGallery,
+  },
+  {
+    id: "work-07",
+    slug: "wataboku",
+    title: "わたぼく",
+    category: ["UI DESIGN", "APP DEVELOPMENT"],
+    thumb: "/thumbs/wataboku-thumb.png",
+    year: "2026.07",
+    tools: ["Figma", "React Native"],
+    workType: "GROUP WORK",
+    description:
+      "感情をキャラクターとして可視化・ソートできる日記アプリです。日記を「読み返す」のではなく、羊の姿になった過去の自分に「再会する」という体験を提案しました。日々の記録を身近な存在として振り返ることで、自分自身を理解し、受け入れるきっかけになることを目指しています。\n\n話した文章量が羊の体の大きさに、話すスピードが羊毛の形に反映されるほか、AIが日記の内容から感情を分析し、羊毛や角の色として表現されます。声で綴った日記が、一頭一頭表情の異なる羊として蓄積されていく仕組みです。\n\nグループワークでは、FigmaでのUI設計とReact Nativeでの実装を担当しました。手書き風のあたたかみのあるUIデザインと、AIによる感情分析の実装にこだわって取り組みました。",
+    Gallery: WatabokuGallery,
   },
 ];
 

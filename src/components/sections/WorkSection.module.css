@@ -30,12 +30,14 @@
     }
 
     .list {
-        li:has(+ li .article:hover) .article {
-            border-bottom-color: transparent;
-        }
+        @media (min-width: 768px) {
+            li:has(+ li .article:hover) .article {
+                border-bottom-color: transparent;
+            }
 
-        li:first-child .article:hover {
-            border-top-color: transparent;
+            li:first-child .article:hover {
+                border-top-color: transparent;
+            }
         }
 
         .article {
@@ -56,20 +58,14 @@
                 width: 100%;
             }
 
-            &:hover {
-                width: 100%;
-                border-top-color: var(--black);
+            @media (min-width: 768px) {
+                &:hover {
+                    width: 100%;
+                    border-top-color: var(--black);
 
-                @media (max-width: 767px) {
-                }
-
-                .inner {
-                    @media (max-width: 767px) {
-                    }
-                    .thumb {
-                        height: 50rem;
-
-                        @media (max-width: 767px) {
+                    .inner {
+                        .thumb {
+                            height: 50rem;
                         }
                     }
                 }
