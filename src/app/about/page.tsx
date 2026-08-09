@@ -26,7 +26,7 @@ export default function About() {
       cat: "Sowtware",
       detail: ["Illustrator", "Maya", "Blender", "Substance 3D Painter", "After Effects", "Fusion360"],
     },
-    { cat: "Programing", detail: ["HTML / CSS", "JavaScript", "TypeScript", "React", "GSAP"] },
+    { cat: "Programing", detail: ["HTML / CSS", "JavaScript", "TypeScript", "React", "GSAP", "PHP"] },
   ];
 
   return (
